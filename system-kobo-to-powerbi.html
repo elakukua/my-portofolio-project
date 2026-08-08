@@ -29,146 +29,106 @@
 <header class="subhero">
   <div class="wrap">
     <a class="back" href="index.html#systems">&larr; All MEAL systems</a>
-    <div class="eyebrow">KoboToolbox &rarr; Cleaning &rarr; Analysis &rarr; Power BI</div>
+    <div class="eyebrow">KoboToolbox &rarr; Cleaning &rarr; Power BI</div>
     <h1>The same route every collection round, so rounds stay comparable.</h1>
-    <p class="sub-lede">Field data that is cleaned differently each cycle cannot be compared across cycles. Fixing the route matters more than any single clean-up.</p>
-    <div class="meta-row">
-      <div class="m"><span class="mk">Stack</span><span class="mv">KoboToolbox &middot; ODK &middot; Power BI</span></div>
-      <div class="m"><span class="mk">Runs</span><span class="mv">Every collection round</span></div>
-      <div class="m"><span class="mk">Used for</span><span class="mv">PDM, baseline, outcome, endline</span></div>
-      <div class="m"><span class="mk">Scale</span><span class="mv">Large enumerator teams</span></div>
-    </div>
+    <p class="sub-lede">Field data cleaned differently each cycle cannot be compared across cycles. Fixing the route matters more than any single clean-up.</p>
   </div>
 </header>
 
-<section class="sec">
+<section class="sec compact">
   <div class="wrap">
 
-    <p class="flowmap-label">The sequence at a glance — <strong>open any step below</strong> for the full detail.</p>
+    <p class="flowmap-label">One fixed route &mdash; <strong>repeated every collection round</strong></p>
     <div class="flowmap">
       <div class="flow-item"><span class="fnum">01</span><span class="flabel">Form design</span></div>
       <div class="flow-item"><span class="fnum">02</span><span class="flabel">Enumerator setup</span></div>
       <div class="flow-item"><span class="fnum">03</span><span class="flabel">Cleaning</span></div>
-      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Analysis &amp; Power BI</span></div>
+      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Analysis</span></div>
+      <div class="flow-item"><span class="fnum">05</span><span class="flabel">Power BI</span></div>
     </div>
 
-    <div class="steps">
-      <div class="step">
-        <div>
-          <div class="snum">STEP 01</div>
-          <div class="arrow-down">&darr;</div>
+    <div class="kgrid">
+      <div class="kcard">
+        <div class="kn">01</div>
+        <h3>Form design</h3>
+        <ul>
+        <li>Constraints and skip logic so contradictory answers cannot be submitted</li>
+        <li>Choice lists rather than free text wherever a category exists</li>
+        <li>Required fields limited to what is genuinely required &mdash; over-forcing produces false answers</li>
+        <li>GPS, photo and timestamp where verification will be needed</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">02</div>
+        <h3>Enumerator setup</h3>
+        <ul>
+        <li>Train on the counting rules and the form together, never separately</li>
+        <li>Walk through the edge cases where two enumerators would reasonably disagree</li>
+        <li>Pilot with real respondents, review same-day, correct before scaling</li>
+        <li>Enumerator identifiers so anomalies can be traced and coached</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">03</div>
+        <h3>Cleaning</h3>
+        <ul>
+        <li>Structural checks first: expected submissions by site, duplicates, incomplete records</li>
+        <li>Logical checks: internal contradictions, outliers reviewed rather than deleted</li>
+        <li>Harmonisation of units, dates, categories and location names</li>
+        <li>Nothing deleted silently &mdash; every correction logged with its reason</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">04</div>
+        <h3>Analysis</h3>
+        <ul>
+        <li>Cleaned data reshaped into the flat structure the model expects</li>
+        <li>Measures written once against that structure</li>
+        <li>Disaggregation derived from fields fixed at form design</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">05</div>
+        <h3>Power BI</h3>
+        <ul>
+        <li>A new round is a data refresh, not a rebuild</li>
+        <li>Round-on-round comparison, which only works because the route did not change</li>
+        <li>Turnaround from field to dashboard in days rather than weeks</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-bottom:28px;">
+      <div class="eyebrow">Applied in</div>
+      <h2>Collection rounds run on this route.</h2>
+      <p>Add the Kobo form beside the resulting dashboard view, with sample data.</p>
+    </div>
+
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Form design</div>
-          <p>The form is the first and cheapest data quality control. Every constraint added here is a cleaning task avoided later.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Question wording tested with enumerators in the field language before deployment</li>
-              <li>Constraints and skip logic so impossible or contradictory answers cannot be submitted</li>
-              <li>Choice lists rather than free text wherever a category exists</li>
-              <li>Required fields limited to what is genuinely required &mdash; over-forcing produces false answers</li>
-              <li>GPS, photo and timestamp capture where verification will be needed</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Output</div>
-            <ul>
-              <li>A deployed form that produces analysable data, not a transcript needing interpretation</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">PDM</div>
+          <h3>Post-Distribution Monitoring rounds</h3>
+          <p>Form, cleaning routine and dashboard for post-distribution monitoring across distributions.</p>
         </div>
       </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 02</div>
-          <div class="arrow-down">&darr;</div>
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Enumerator setup and training</div>
-          <p>A well-designed form still fails if the people using it count differently.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Train on the indicator counting rules and the form together, never separately</li>
-              <li>Walk through edge cases explicitly &mdash; the cases where two enumerators would reasonably disagree</li>
-              <li>Pilot with real respondents, review the first submissions the same day, correct before scaling</li>
-              <li>Assign enumerator identifiers so anomalies can be traced to a person and addressed as coaching</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Output</div>
-            <ul>
-              <li>A team applying the same definition, which is what makes disaggregation trustworthy</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 03</div>
-          <div class="arrow-down">&darr;</div>
-        </div>
-        <div class="sbody">
-          <div class="stitle">Cleaning</div>
-          <p>A defined sequence rather than an ad hoc pass, so the same decisions are made every round.</p>
-          <div class="blk">
-            <div class="bk">The routine</div>
-            <ul>
-              <li>Structural checks first: expected submission counts by site, duplicate submissions, incomplete records</li>
-              <li>Logical checks: internal contradictions the form could not catch, outliers reviewed rather than deleted</li>
-              <li>Harmonisation: units, date formats, category labels, location names aligned to the master list</li>
-              <li>Every correction logged with a reason &mdash; the log is part of the deliverable, not scratch work</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Principle</div>
-            <ul>
-              <li>Nothing is deleted silently. A record removed from analysis is recorded as removed, with the rule that removed it</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 04</div>
-        </div>
-        <div class="sbody">
-          <div class="stitle">Analysis and Power BI</div>
-          <p>With a fixed route from form to model, the dashboard rebuilds each round instead of being reconstructed.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Cleaned data reshaped into the flat structure the reporting model expects</li>
-              <li>Measures written once against that structure, so a new round is a data refresh rather than a rebuild</li>
-              <li>Disaggregated views built from the fields fixed at form design, not derived afterwards</li>
-              <li>Round-on-round comparison views, which only work because the route did not change</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Result</div>
-            <ul>
-              <li>Collection, cleaning, analysis and visualisation function as one connected flow</li>
-              <li>Turnaround from field to dashboard measured in days rather than weeks</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">AIM+</div>
+          <h3>Kobo to AIM+ pipeline</h3>
+          <p>Collection reshaped into the flat structure the AIM+ reporting model expects.</p>
         </div>
       </div>
     </div>
 
-    <div class="callout">
-      <div class="ck">What breaks when the route is not fixed</div>
-      <ul>
-        <li><strong>Each round is cleaned by whoever is available,</strong> using slightly different rules &mdash; so a change between rounds may be real or may be the cleaning.</li>
-        <li><strong>Definitions drift between enumerator cohorts,</strong> and the disaggregation quietly stops meaning the same thing.</li>
-        <li><strong>The dashboard is rebuilt each cycle,</strong> which is where most of the effort goes and where most of the errors enter.</li>
-      </ul>
-    </div>
-
-    <div class="embed-slot" style="margin-top:44px;">
-      <div class="es-lab">Screenshot or demo</div>
-      <div class="es-note">Add a Kobo form screenshot and the resulting Power BI view, with sample data.</div>
-    </div>
   </div>
 </section>
 
@@ -179,12 +139,13 @@
     <div class="clinks">
       <a href="mailto:ersalakukua@gmail.com">ersalakukua@gmail.com</a>
       <a href="https://linkedin.com/in/ersa-lakukua" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/6285236074563?text=Hi%20Ersa%2C%20I%20found%20your%20portfolio%20and%20wanted%20to%20say%20hello!" target="_blank" rel="noopener">WhatsApp</a>
       <a href="index.html#systems">All MEAL systems</a>
       <a href="index.html">Back to portfolio</a>
     </div>
     <div class="fine">
-      <span>Ersa William Lakukua &middot; MEAL &amp; Data Quality Practitioner &middot; Jakarta, Indonesia</span>
-      <span>Process described generically; no programme data included</span>
+      <span>Ersa William Lakukua &middot; MEAL Data Specialist &middot; Jakarta, Indonesia</span>
+      <span>Screenshots anonymised; no beneficiary data shown</span>
     </div>
   </div>
 </footer>
