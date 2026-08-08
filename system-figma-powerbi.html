@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard concept before dashboard build — Ersa William Lakukua</title>
+<meta name="description" content="Framing dashboard layout, hierarchy and visual language in Figma before building in Power BI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark">EW</span> Ersa William Lakukua</div>
+    <div class="nav-links">
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#systems">MEAL systems</a>
+      <a href="index.html#quality">Data quality</a>
+      <a href="index.html#github">GitHub</a>
+      <a href="index.html#powerbi">Power BI</a>
+    </div>
+    <a class="nav-cta" href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="subhero">
+  <div class="wrap">
+    <a class="back" href="index.html#systems">&larr; All MEAL systems</a>
+    <div class="eyebrow">Figma &rarr; Power BI</div>
+    <h1>Agree the dashboard on paper, before writing a single measure.</h1>
+    <p class="sub-lede">Building a dashboard is expensive to change and cheap to draw. Most rework in BI projects comes from discovering the design during the build, in front of stakeholders who are seeing it for the first time.</p>
+    <div class="meta-row">
+      <div class="m"><span class="mk">Stack</span><span class="mv">Figma &middot; Power BI</span></div>
+      <div class="m"><span class="mk">Runs</span><span class="mv">Before every dashboard build</span></div>
+      <div class="m"><span class="mk">Involves</span><span class="mv">Programme, technical specialists, management</span></div>
+      <div class="m"><span class="mk">Saves</span><span class="mv">Rework cycles</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="steps">
+      <div class="step">
+        <div>
+          <div class="snum">STEP 01</div>
+          <div class="arrow-down">&darr;</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Establish the questions first</div>
+          <p>A dashboard is a set of answers. Drawing it starts with agreeing the questions and who is asking them.</p>
+          <div class="blk">
+            <div class="bk">What is needed</div>
+            <ul>
+              <li>The decisions this dashboard is meant to support, stated as questions someone actually asks</li>
+              <li>The audience for each view &mdash; field team, management, donor &mdash; since they need different depth</li>
+              <li>The indicators available, and honesty about which questions the data cannot yet answer</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Output</div>
+            <ul>
+              <li>A short question list that becomes the specification for the layout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <div class="snum">STEP 02</div>
+          <div class="arrow-down">&darr;</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Frame the layout in Figma</div>
+          <p>Wireframes at real proportions, so the conversation is about hierarchy and not about colour.</p>
+          <div class="blk">
+            <div class="bk">Process</div>
+            <ul>
+              <li>Page structure first: how many views, what each one is for, how a user moves between them</li>
+              <li>Visual hierarchy: what must be readable in five seconds, what is available on inspection</li>
+              <li>Chart type chosen deliberately per question rather than by habit</li>
+              <li>Filter and slicer placement decided before the build, since retro-fitting these is disruptive</li>
+              <li>Brand-consistent colour, type and spacing applied as tokens rather than per-object choices</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Output</div>
+            <ul>
+              <li>A reviewable concept that looks like the finished product but costs a fraction to change</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <div class="snum">STEP 03</div>
+          <div class="arrow-down">&darr;</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Review before building</div>
+          <p>The review that would otherwise happen after two weeks of Power BI work happens here instead.</p>
+          <div class="blk">
+            <div class="bk">Process</div>
+            <ul>
+              <li>Walk stakeholders through the frames as if using the dashboard, question by question</li>
+              <li>Capture change requests against the frames, where they cost minutes</li>
+              <li>Confirm which measures are needed &mdash; the frame list becomes the measure list</li>
+              <li>Sign off the concept explicitly, so the build has an agreed target</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Why this step is the point</div>
+            <ul>
+              <li>Stakeholders review a picture far more willingly than a working file they are afraid to break</li>
+              <li>Disagreements about what matters surface before any modelling work depends on the answer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <div class="snum">STEP 04</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Build to the frame</div>
+          <p>With the design settled, the Power BI work is modelling and measures rather than design decisions made under time pressure.</p>
+          <div class="blk">
+            <div class="bk">Process</div>
+            <ul>
+              <li>Data model and measure library built against the agreed question list</li>
+              <li>Layout reproduced from the frames, including spacing and hierarchy</li>
+              <li>Design tokens carried across so the dashboard matches organisational brand standards</li>
+              <li>The frames retained as documentation of what was agreed and why</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Result</div>
+            <ul>
+              <li>Fewer build-and-revise cycles, and a dashboard whose layout has a stated rationale</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="ck">What this changes in practice</div>
+      <ul>
+        <li><strong>Design decisions stop being made at 11pm.</strong> They are made in a review, deliberately, by the people who will use the result.</li>
+        <li><strong>The measure list is derived, not guessed.</strong> Each measure exists because a frame needs it.</li>
+        <li><strong>Brand consistency is built in.</strong> Tokens are set once in the concept rather than approximated per visual.</li>
+      </ul>
+    </div>
+
+    <div class="embed-slot" style="margin-top:44px;">
+      <div class="es-lab">Screenshot or demo</div>
+      <div class="es-note">Add the Figma frames next to the finished Power BI view, so the before and after read together.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Open to conversations about MEAL systems, data quality and evidence.</h2>
+    <div class="clinks">
+      <a href="mailto:ersalakukua@gmail.com">ersalakukua@gmail.com</a>
+      <a href="https://linkedin.com/in/ersa-lakukua" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html#systems">All MEAL systems</a>
+      <a href="index.html">Back to portfolio</a>
+    </div>
+    <div class="fine">
+      <span>Ersa William Lakukua &middot; MEAL &amp; Data Quality Practitioner &middot; Jakarta, Indonesia</span>
+      <span>Process described generically; no programme data included</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

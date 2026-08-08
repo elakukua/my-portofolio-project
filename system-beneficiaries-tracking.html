@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beneficiaries Tracking Table — Automation Framework — Ersa William Lakukua</title>
+<meta name="description" content="An automated pipeline moving beneficiary records from intake form to warehouse to live dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark">EW</span> Ersa William Lakukua</div>
+    <div class="nav-links">
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#systems">MEAL systems</a>
+      <a href="index.html#quality">Data quality</a>
+      <a href="index.html#github">GitHub</a>
+      <a href="index.html#powerbi">Power BI</a>
+    </div>
+    <a class="nav-cta" href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="subhero">
+  <div class="wrap">
+    <a class="back" href="index.html#systems">&larr; All MEAL systems</a>
+    <div class="eyebrow">Google Forms &rarr; BigQuery &rarr; Looker Studio</div>
+    <h1>Beneficiary tracking that is current, not compiled.</h1>
+    <p class="sub-lede">Most beneficiary tracking tables are a compilation exercise: someone collects workbooks, merges them, and the number is already out of date by the time it is read. This replaces that cycle with a pipeline.</p>
+    <div class="meta-row">
+      <div class="m"><span class="mk">Stack</span><span class="mv">Google Forms &middot; BigQuery &middot; Looker Studio</span></div>
+      <div class="m"><span class="mk">Runs</span><span class="mv">Continuously</span></div>
+      <div class="m"><span class="mk">Replaces</span><span class="mv">Periodic manual compilation</span></div>
+      <div class="m"><span class="mk">Users</span><span class="mv">Programme, PEARL, management</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="steps">
+      <div class="step">
+        <div>
+          <div class="snum">STEP 01</div>
+          <div class="arrow-down">&darr;</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Define the record before the form</div>
+          <p>The unit of the table is one beneficiary interaction. Everything else follows from defining that precisely.</p>
+          <div class="blk">
+            <div class="bk">What is needed</div>
+            <ul>
+              <li>An agreed definition of who counts as a beneficiary for each project type &mdash; direct, indirect, participant, reached</li>
+              <li>The disaggregation the logframe and donor both require: sex, age band, disability, location</li>
+              <li>A unique identifier convention that works across projects without exposing personal data</li>
+              <li>Consent wording and a data protection position agreed before any collection</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Why it matters</div>
+            <ul>
+              <li>Double counting almost always originates here, not in the pipeline &mdash; the same person recorded twice under two project labels</li>
+              <li>If the identifier is designed after collection begins, deduplication becomes guesswork</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <div class="snum">STEP 02</div>
+          <div class="arrow-down">&darr;</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Build the intake form</div>
+          <p>A Google Form as the single entry point, with validation doing as much of the quality work as possible at the moment of entry.</p>
+          <div class="blk">
+            <div class="bk">Process</div>
+            <ul>
+              <li>Field-level validation: required fields, response ranges, controlled dropdowns instead of free text</li>
+              <li>Conditional logic so enumerators only see questions relevant to the project and beneficiary type</li>
+              <li>Location captured from a fixed list rather than typed, so it joins cleanly downstream</li>
+              <li>One form, many projects &mdash; a project field routes the record rather than each project maintaining its own form</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Output</div>
+            <ul>
+              <li>A single intake instrument that produces structurally identical records regardless of who fills it</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <div class="snum">STEP 03</div>
+          <div class="arrow-down">&darr;</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Land the data in BigQuery</div>
+          <p>Responses flow into a warehouse table rather than living in a spreadsheet that someone eventually copies.</p>
+          <div class="blk">
+            <div class="bk">Process</div>
+            <ul>
+              <li>Raw responses land untouched in a staging table &mdash; the original is never overwritten</li>
+              <li>A transformation step handles typing, date parsing, category harmonisation and identifier construction</li>
+              <li>Deduplication logic runs against the identifier, flagging rather than silently deleting suspected duplicates</li>
+              <li>A clean table is the only object the dashboard reads from</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Why a warehouse and not a sheet</div>
+            <ul>
+              <li>Spreadsheets degrade as they grow: formulas break, rows get sorted, versions multiply</li>
+              <li>The staging-then-clean pattern means a bad transformation can be re-run without losing the source data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <div class="snum">STEP 04</div>
+        </div>
+        <div class="sbody">
+          <div class="stitle">Publish to Looker Studio</div>
+          <p>The dashboard reads the clean table directly, so what a manager sees is what the pipeline produced &mdash; no intermediate compilation step to go wrong.</p>
+          <div class="blk">
+            <div class="bk">What the dashboard shows</div>
+            <ul>
+              <li>Cumulative and period reach against target, by project and location</li>
+              <li>Full disaggregation views, since the disaggregation was fixed at Step 01</li>
+              <li>A data quality panel: records flagged as duplicates, records missing required disaggregation, submission gaps by site</li>
+            </ul>
+          </div>
+          <div class="blk">
+            <div class="bk">Result</div>
+            <ul>
+              <li>Tracking becomes a question you ask the dashboard rather than a task someone performs</li>
+              <li>Data quality problems surface as a visible count instead of being discovered at reporting time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="ck">Where this pattern earns its keep</div>
+      <ul>
+        <li><strong>Reporting deadlines stop being events.</strong> The figure exists continuously, so a donor request is a screenshot rather than a two-day compilation.</li>
+        <li><strong>Duplicates become visible.</strong> Flagged rather than deleted, so someone with programme knowledge decides &mdash; not a formula.</li>
+        <li><strong>New projects join without new infrastructure.</strong> One form, one warehouse, one dashboard; a new project is a new value in a field.</li>
+      </ul>
+    </div>
+
+    <div class="embed-slot" style="margin-top:44px;">
+      <div class="es-lab">Screenshot or demo</div>
+      <div class="es-note">Add a screenshot of the Looker Studio tracking view, with names and identifiers removed.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Open to conversations about MEAL systems, data quality and evidence.</h2>
+    <div class="clinks">
+      <a href="mailto:ersalakukua@gmail.com">ersalakukua@gmail.com</a>
+      <a href="https://linkedin.com/in/ersa-lakukua" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html#systems">All MEAL systems</a>
+      <a href="index.html">Back to portfolio</a>
+    </div>
+    <div class="fine">
+      <span>Ersa William Lakukua &middot; MEAL &amp; Data Quality Practitioner &middot; Jakarta, Indonesia</span>
+      <span>Process described generically; no programme data included</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
