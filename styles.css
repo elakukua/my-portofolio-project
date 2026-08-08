@@ -268,3 +268,65 @@ footer h2{color:var(--on-ink); font-size:clamp(26px,4.4vw,40px); max-width:520px
 
 :focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
 @media(prefers-reduced-motion:reduce){*{transition:none!important; scroll-behavior:auto!important;}}
+
+/* ===========================================================
+   COMPACT / PRESENTATION COMPONENTS
+   =========================================================== */
+
+/* ---------- HERO PORTRAIT ---------- */
+.hero-intro{display:grid; grid-template-columns:auto 1fr; gap:38px; align-items:start;}
+.portrait{width:210px; flex:none; position:relative;}
+.portrait img{width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 18%; border-radius:var(--r); display:block; filter:grayscale(18%) contrast(1.03);}
+.portrait::after{content:''; position:absolute; left:-7px; bottom:-7px; width:56px; height:56px; border-left:2px solid var(--teal); border-bottom:2px solid var(--teal); pointer-events:none;}
+@media(max-width:900px){
+  .hero-intro{grid-template-columns:auto 1fr; gap:24px;}
+  .portrait{width:132px;}
+  .portrait::after{width:36px; height:36px;}
+}
+@media(max-width:520px){
+  .hero-intro{grid-template-columns:1fr; gap:22px;}
+  .portrait{width:150px;}
+}
+
+/* ---------- CIRCULAR QA CYCLE ---------- */
+.cycle-wrap{display:grid; grid-template-columns:minmax(280px,420px) 1fr; gap:52px; align-items:center; margin-bottom:12px;}
+.cycle-svg{width:100%; height:auto; display:block;}
+.cycle-svg .ring{fill:none; stroke:var(--line-light); stroke-width:1.5;}
+.cycle-svg .arc{fill:none; stroke:var(--teal); stroke-width:2.5; stroke-linecap:round;}
+.cycle-svg .node{fill:var(--paper-2); stroke:var(--teal-deep); stroke-width:2;}
+.cycle-svg .node-n{font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:500; fill:var(--teal-deep); text-anchor:middle;}
+.cycle-svg .node-t{font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:600; fill:var(--ink); text-anchor:middle;}
+.cycle-svg .core-t{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600; fill:var(--ink); text-anchor:middle;}
+.cycle-svg .core-s{font-family:'IBM Plex Mono',monospace; font-size:9.5px; fill:var(--slate-soft); text-anchor:middle; letter-spacing:.08em;}
+.cycle-list{display:grid; gap:1px; background:var(--line-light); border:1px solid var(--line-light); border-radius:var(--r); overflow:hidden;}
+.cycle-item{background:var(--paper-2); padding:16px 20px; display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start;}
+.cycle-item .cn{font-family:'IBM Plex Mono'; font-size:11px; color:var(--teal-deep); padding-top:3px;}
+.cycle-item .cq{font-family:'Space Grotesk'; font-size:14.5px; font-weight:600; color:var(--ink); margin-bottom:3px;}
+.cycle-item .ca{font-size:13px; color:var(--slate);}
+@media(max-width:880px){.cycle-wrap{grid-template-columns:1fr; gap:36px;}}
+
+/* ---------- COMPACT KEY-POINT CARDS ---------- */
+.kgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px; background:var(--line-light); border:1px solid var(--line-light); border-radius:var(--r); overflow:hidden; margin-bottom:56px;}
+.kcard{background:var(--paper-2); padding:26px 24px 30px;}
+.kcard .kn{font-family:'IBM Plex Mono'; font-size:10.5px; letter-spacing:.09em; color:var(--teal-deep); text-transform:uppercase;}
+.kcard h3{font-size:16px; font-weight:600; margin:10px 0 14px;}
+.kcard ul{list-style:none; display:grid; gap:8px;}
+.kcard li{font-size:13.5px; padding-left:15px; position:relative; line-height:1.5;}
+.kcard li::before{content:''; position:absolute; left:0; top:8px; width:5px; height:5px; background:var(--teal);}
+
+/* ---------- PROJECT CARDS (with screenshot space) ---------- */
+.pgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+.pcard{border:1px solid var(--line-light); border-radius:var(--r); background:var(--paper-2); overflow:hidden; display:flex; flex-direction:column;}
+.pshot{aspect-ratio:16/9; background:var(--paper); border-bottom:1px solid var(--line-light); display:flex; align-items:center; justify-content:center; overflow:hidden;}
+.pshot img{width:100%; height:100%; object-fit:cover; display:block;}
+.pshot .pph{font-family:'IBM Plex Mono'; font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--slate-soft);}
+.pbody{padding:20px 22px 24px;}
+.pbody .ptag{font-family:'IBM Plex Mono'; font-size:10px; text-transform:uppercase; letter-spacing:.06em; color:var(--teal-deep); margin-bottom:8px;}
+.pbody h3{font-size:15.5px; font-weight:600; margin-bottom:7px; line-height:1.3;}
+.pbody p{font-size:13.5px;}
+@media(max-width:720px){.pgrid{grid-template-columns:1fr;}}
+
+/* ---------- PRESENTATION READABILITY ---------- */
+.sec.compact{padding:70px 0;}
+.lead-note{font-size:16px; color:var(--slate); max-width:660px; margin-bottom:40px;}
+.lead-note strong{color:var(--ink); font-weight:600;}
