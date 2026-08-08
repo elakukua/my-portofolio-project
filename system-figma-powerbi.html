@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard concept before dashboard build — Ersa William Lakukua</title>
-<meta name="description" content="Framing dashboard layout, hierarchy and visual language in Figma before building in Power BI.">
+<title>UI/UX frame and prototype before dashboard build — Ersa William Lakukua</title>
+<meta name="description" content="Designing dashboard frames and prototypes in Figma as the reference for building in Power BI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,145 +29,114 @@
 <header class="subhero">
   <div class="wrap">
     <a class="back" href="index.html#systems">&larr; All MEAL systems</a>
-    <div class="eyebrow">Figma &rarr; Power BI</div>
-    <h1>Agree the dashboard on paper, before writing a single measure.</h1>
-    <p class="sub-lede">Building a dashboard is expensive to change and cheap to draw. Most rework in BI projects comes from discovering the design during the build, in front of stakeholders who are seeing it for the first time.</p>
-    <div class="meta-row">
-      <div class="m"><span class="mk">Stack</span><span class="mv">Figma &middot; Power BI</span></div>
-      <div class="m"><span class="mk">Runs</span><span class="mv">Before every dashboard build</span></div>
-      <div class="m"><span class="mk">Involves</span><span class="mv">Programme, technical specialists, management</span></div>
-      <div class="m"><span class="mk">Saves</span><span class="mv">Rework cycles</span></div>
-    </div>
+    <div class="eyebrow">Figma &rarr; Prototype &rarr; Power BI</div>
+    <h1>Design the dashboard as a prototype, then build to it.</h1>
+    <p class="sub-lede">A dashboard is expensive to change and cheap to draw. Framing the UI/UX in Figma first means the Power BI build starts from an agreed reference instead of discovering the design while building it.</p>
   </div>
 </header>
 
-<section class="sec">
+<section class="sec compact">
   <div class="wrap">
 
-    <p class="flowmap-label">The sequence at a glance — <strong>open any step below</strong> for the full detail.</p>
+    <p class="flowmap-label">Design-to-build flow &mdash; <strong>each stage is a reference for the next</strong></p>
     <div class="flowmap">
-      <div class="flow-item"><span class="fnum">01</span><span class="flabel">Establish the questions</span></div>
-      <div class="flow-item"><span class="fnum">02</span><span class="flabel">Frame in Figma</span></div>
-      <div class="flow-item"><span class="fnum">03</span><span class="flabel">Review before building</span></div>
-      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Build to the frame</span></div>
+      <div class="flow-item"><span class="fnum">01</span><span class="flabel">Questions</span></div>
+      <div class="flow-item"><span class="fnum">02</span><span class="flabel">Wireframe</span></div>
+      <div class="flow-item"><span class="fnum">03</span><span class="flabel">UI frame</span></div>
+      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Prototype</span></div>
+      <div class="flow-item"><span class="fnum">05</span><span class="flabel">Review</span></div>
+      <div class="flow-item"><span class="fnum">06</span><span class="flabel">Build in Power BI</span></div>
     </div>
 
-    <div class="steps">
-      <div class="step">
-        <div>
-          <div class="snum">STEP 01</div>
-          <div class="arrow-down">&darr;</div>
+    <div class="kgrid">
+      <div class="kcard">
+        <div class="kn">01</div>
+        <h3>Questions</h3>
+        <ul>
+        <li>The decisions the dashboard must support, written as questions someone actually asks</li>
+        <li>Audience per view: field team, management, donor &mdash; each needs different depth</li>
+        <li>Honest note on which questions the data cannot yet answer</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">02</div>
+        <h3>Wireframe</h3>
+        <ul>
+        <li>Page structure: how many views, what each is for, how a user moves between them</li>
+        <li>Visual hierarchy: what must read in five seconds</li>
+        <li>Chart type chosen per question rather than by habit</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">03</div>
+        <h3>UI frame</h3>
+        <ul>
+        <li>Layout at real proportions with spacing, type scale and colour tokens applied</li>
+        <li>Brand standards set once as tokens, not per object</li>
+        <li>Filter and slicer placement decided here &mdash; retro-fitting these is disruptive</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">04</div>
+        <h3>Prototype</h3>
+        <ul>
+        <li>Frames linked so reviewers can click through as if using the dashboard</li>
+        <li>Interaction states shown: filtered, empty, drill-down</li>
+        <li>Costs minutes to change what would take a day in Power BI</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">05</div>
+        <h3>Review</h3>
+        <ul>
+        <li>Walk stakeholders through the prototype question by question</li>
+        <li>Change requests captured against frames, where they are cheap</li>
+        <li>The frame list becomes the measure list</li>
+        <li>Concept signed off, so the build has an agreed target</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">06</div>
+        <h3>Build in Power BI</h3>
+        <ul>
+        <li>Data model and measures built against the agreed question list</li>
+        <li>Layout reproduced from the frames, including spacing and hierarchy</li>
+        <li>Frames retained as documentation of what was agreed and why</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-bottom:28px;">
+      <div class="eyebrow">Applied in</div>
+      <h2>Design references produced this way.</h2>
+      <p>Add the Figma frame beside the finished dashboard so the before and after read together.</p>
+    </div>
+
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Establish the questions first</div>
-          <p>A dashboard is a set of answers. Drawing it starts with agreeing the questions and who is asking them.</p>
-          <div class="blk">
-            <div class="bk">What is needed</div>
-            <ul>
-              <li>The decisions this dashboard is meant to support, stated as questions someone actually asks</li>
-              <li>The audience for each view &mdash; field team, management, donor &mdash; since they need different depth</li>
-              <li>The indicators available, and honesty about which questions the data cannot yet answer</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Output</div>
-            <ul>
-              <li>A short question list that becomes the specification for the layout</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">Figma &rarr; Power BI</div>
+          <h3>Dashboard frame set</h3>
+          <p>The wireframe and UI frames that preceded the build, shown next to the delivered dashboard.</p>
         </div>
       </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 02</div>
-          <div class="arrow-down">&darr;</div>
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Frame the layout in Figma</div>
-          <p>Wireframes at real proportions, so the conversation is about hierarchy and not about colour.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Page structure first: how many views, what each one is for, how a user moves between them</li>
-              <li>Visual hierarchy: what must be readable in five seconds, what is available on inspection</li>
-              <li>Chart type chosen deliberately per question rather than by habit</li>
-              <li>Filter and slicer placement decided before the build, since retro-fitting these is disruptive</li>
-              <li>Brand-consistent colour, type and spacing applied as tokens rather than per-object choices</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Output</div>
-            <ul>
-              <li>A reviewable concept that looks like the finished product but costs a fraction to change</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 03</div>
-          <div class="arrow-down">&darr;</div>
-        </div>
-        <div class="sbody">
-          <div class="stitle">Review before building</div>
-          <p>The review that would otherwise happen after two weeks of Power BI work happens here instead.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Walk stakeholders through the frames as if using the dashboard, question by question</li>
-              <li>Capture change requests against the frames, where they cost minutes</li>
-              <li>Confirm which measures are needed &mdash; the frame list becomes the measure list</li>
-              <li>Sign off the concept explicitly, so the build has an agreed target</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Why this step is the point</div>
-            <ul>
-              <li>Stakeholders review a picture far more willingly than a working file they are afraid to break</li>
-              <li>Disagreements about what matters surface before any modelling work depends on the answer</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 04</div>
-        </div>
-        <div class="sbody">
-          <div class="stitle">Build to the frame</div>
-          <p>With the design settled, the Power BI work is modelling and measures rather than design decisions made under time pressure.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Data model and measure library built against the agreed question list</li>
-              <li>Layout reproduced from the frames, including spacing and hierarchy</li>
-              <li>Design tokens carried across so the dashboard matches organisational brand standards</li>
-              <li>The frames retained as documentation of what was agreed and why</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Result</div>
-            <ul>
-              <li>Fewer build-and-revise cycles, and a dashboard whose layout has a stated rationale</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">Prototype</div>
+          <h3>Clickable prototype</h3>
+          <p>The linked prototype used in the stakeholder review, including filtered and empty states.</p>
         </div>
       </div>
     </div>
 
-    <div class="callout">
-      <div class="ck">What this changes in practice</div>
-      <ul>
-        <li><strong>Design decisions stop being made at 11pm.</strong> They are made in a review, deliberately, by the people who will use the result.</li>
-        <li><strong>The measure list is derived, not guessed.</strong> Each measure exists because a frame needs it.</li>
-        <li><strong>Brand consistency is built in.</strong> Tokens are set once in the concept rather than approximated per visual.</li>
-      </ul>
-    </div>
-
-    <div class="embed-slot" style="margin-top:44px;">
-      <div class="es-lab">Screenshot or demo</div>
-      <div class="es-note">Add the Figma frames next to the finished Power BI view, so the before and after read together.</div>
-    </div>
   </div>
 </section>
 
@@ -178,12 +147,13 @@
     <div class="clinks">
       <a href="mailto:ersalakukua@gmail.com">ersalakukua@gmail.com</a>
       <a href="https://linkedin.com/in/ersa-lakukua" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/6285236074563?text=Hi%20Ersa%2C%20I%20found%20your%20portfolio%20and%20wanted%20to%20say%20hello!" target="_blank" rel="noopener">WhatsApp</a>
       <a href="index.html#systems">All MEAL systems</a>
       <a href="index.html">Back to portfolio</a>
     </div>
     <div class="fine">
-      <span>Ersa William Lakukua &middot; MEAL &amp; Data Quality Practitioner &middot; Jakarta, Indonesia</span>
-      <span>Process described generically; no programme data included</span>
+      <span>Ersa William Lakukua &middot; MEAL Data Specialist &middot; Jakarta, Indonesia</span>
+      <span>Screenshots anonymised; no beneficiary data shown</span>
     </div>
   </div>
 </footer>
