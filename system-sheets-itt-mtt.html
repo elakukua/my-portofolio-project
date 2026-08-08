@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ITT / MTT project processing — Ersa William Lakukua</title>
-<meta name="description" content="Cleaning, analysis and visualisation of the Indicator Tracking Table and Monitoring Tracking Table in Google Sheets.">
+<meta name="description" content="Monitoring output level through evidence: Indicator and Monitoring Tracking Tables in Google Sheets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -30,144 +30,117 @@
   <div class="wrap">
     <a class="back" href="index.html#systems">&larr; All MEAL systems</a>
     <div class="eyebrow">Google Sheets &middot; ITT &middot; MTT</div>
-    <h1>The working layer where project figures are reconciled before they become reports.</h1>
-    <p class="sub-lede">The Indicator Tracking Table holds what was planned. The Monitoring Tracking Table holds what was recorded. Most reporting problems are a disagreement between the two that nobody looked for.</p>
-    <div class="meta-row">
-      <div class="m"><span class="mk">Stack</span><span class="mv">Google Sheets</span></div>
-      <div class="m"><span class="mk">Runs</span><span class="mv">Every reporting period</span></div>
-      <div class="m"><span class="mk">Covers</span><span class="mv">Cleaning, analysis, visualisation</span></div>
-      <div class="m"><span class="mk">Feeds</span><span class="mv">Donor and management reporting</span></div>
-    </div>
+    <h1>Monitoring output level through evidence, not assertion.</h1>
+    <p class="sub-lede">The Indicator Tracking Table holds what was planned. The Monitoring Tracking Table holds what was recorded, and the evidence behind it. Monitoring at output level means checking those two agree &mdash; and that a document exists behind every number.</p>
   </div>
 </header>
 
-<section class="sec">
+<section class="sec compact">
   <div class="wrap">
 
-    <p class="flowmap-label">The sequence at a glance — <strong>open any step below</strong> for the full detail.</p>
+    <p class="flowmap-label">The reconciliation loop &mdash; <strong>run every reporting period</strong></p>
     <div class="flowmap">
-      <div class="flow-item"><span class="fnum">01</span><span class="flabel">Structure both tables</span></div>
-      <div class="flow-item"><span class="fnum">02</span><span class="flabel">Clean &amp; validate</span></div>
-      <div class="flow-item"><span class="fnum">03</span><span class="flabel">Reconcile both directions</span></div>
-      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Visualise for action</span></div>
+      <div class="flow-item"><span class="fnum">01</span><span class="flabel">Same spine, both tables</span></div>
+      <div class="flow-item"><span class="fnum">02</span><span class="flabel">Validate entry</span></div>
+      <div class="flow-item"><span class="fnum">03</span><span class="flabel">Reconcile both ways</span></div>
+      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Evidence check</span></div>
+      <div class="flow-item"><span class="fnum">05</span><span class="flabel">Visualise</span></div>
     </div>
 
-    <div class="steps">
-      <div class="step">
-        <div>
-          <div class="snum">STEP 01</div>
-          <div class="arrow-down">&darr;</div>
+    <div class="kgrid">
+      <div class="kcard">
+        <div class="kn">01</div>
+        <h3>Same spine, both tables</h3>
+        <ul>
+        <li>Shared indicator code carried identically in ITT and MTT</li>
+        <li>Same period boundaries and same disaggregation labels on both sides</li>
+        <li>One owner per table, so changes are deliberate</li>
+        <li>Without a joinable spine, reconciliation becomes manual cell comparison</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">02</div>
+        <h3>Validate entry</h3>
+        <ul>
+        <li>Dropdowns for indicator codes, periods and categories &mdash; typing cannot create a new category</li>
+        <li>Totals checked against their own disaggregation</li>
+        <li>Blank achievement against a closed period flagged, not read as zero</li>
+        <li>Error-suppressing formulas removed</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">03</div>
+        <h3>Reconcile both ways</h3>
+        <ul>
+        <li>Every ITT indicator and period &rarr; is there a matching achievement in the MTT?</li>
+        <li>Every MTT achievement &rarr; does it map to a planned indicator and period?</li>
+        <li>One-directional checks miss achievements recorded against unplanned periods, and copy-paste duplication between periods</li>
+        <li>Each discrepancy classified and resolved in a log</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">04</div>
+        <h3>Evidence check</h3>
+        <ul>
+        <li>Output-level monitoring means the number is only as good as the document behind it</li>
+        <li>Attendance lists, distribution records, session reports traced per reported figure</li>
+        <li>Means of verification confirmed against what the reference sheet specified</li>
+        <li>Figures without evidence flagged rather than reported</li>
+        </ul>
+      </div>
+      <div class="kcard">
+        <div class="kn">05</div>
+        <h3>Visualise</h3>
+        <ul>
+        <li>Progress against target, with the gap stated rather than implied</li>
+        <li>A live discrepancy view so unresolved items stay visible</li>
+        <li>Views built per audience: indicator level for field, outcome level for management</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-bottom:28px;">
+      <div class="eyebrow">Applied in</div>
+      <h2>Where this has been applied.</h2>
+      <p>Partner-run trackers, routine monitoring across a full monev period, and zonal compilation.</p>
+    </div>
+
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Structure both tables to the same spine</div>
-          <p>Reconciliation is only possible if both tables can be joined on the same keys. That is a design decision, not a later fix.</p>
-          <div class="blk">
-            <div class="bk">What is needed</div>
-            <ul>
-              <li>A shared indicator code carried identically in both tables</li>
-              <li>Consistent period definitions &mdash; the same fiscal or project period boundaries on both sides</li>
-              <li>The same disaggregation categories, in the same order, with the same labels</li>
-              <li>One owner per table, so changes are deliberate rather than accumulated</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Why it matters</div>
-            <ul>
-              <li>Two tables that cannot be joined are two opinions, and the reconciliation becomes manual comparison of hundreds of cells</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">Partner capacity &middot; FY22&ndash;24</div>
+          <h3>MTT tracker for Jakarta partners (FPMJ &amp; YATERI)</h3>
+          <p>Developed MTT trackers for partners under the mitra operating model, then built their capacity to run and reconcile them independently.</p>
         </div>
       </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 02</div>
-          <div class="arrow-down">&darr;</div>
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Clean and validate</div>
-          <p>Before comparison, each table has to be internally sound.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Data validation on entry: dropdowns for indicator codes, periods and categories, so typing cannot introduce a new category</li>
-              <li>Check totals against their own disaggregation &mdash; the parts should reconstruct the whole</li>
-              <li>Flag blank achievements against periods that have closed, rather than reading blank as zero</li>
-              <li>Remove error-suppressing formulas so a broken calculation shows as broken</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Principle</div>
-            <ul>
-              <li>A wrapper that hides an error does not fix it; it defers it to whoever reads the report</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">Routine monitoring</div>
+          <h3>ITT / MTT monitoring across the monev period</h3>
+          <p>Continuous ITT and MTT monitoring throughout the monitoring and evaluation period, covering emergency response projects and operational partners alongside development portfolios.</p>
         </div>
       </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 03</div>
-          <div class="arrow-down">&darr;</div>
+      <div class="pcard">
+        <div class="pshot">
+          <!-- <img src="shot-xx.png" alt=""> -->
+          <span class="pph">Screenshot</span>
         </div>
-        <div class="sbody">
-          <div class="stitle">Reconcile in both directions</div>
-          <p>Checking that every ITT line has an MTT counterpart is only half the work. The other half finds what was recorded but never planned for.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Direction one: for every indicator and period in the ITT, is there a corresponding achievement in the MTT?</li>
-              <li>Direction two: for every achievement recorded in the MTT, does it map to a planned indicator and period in the ITT?</li>
-              <li>Classify each discrepancy: missing period, transcription error, definitional difference, or genuine change</li>
-              <li>Log the resolution and who decided it &mdash; the log answers the auditor's question before it is asked</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">What one-directional checks miss</div>
-            <ul>
-              <li>Achievements recorded against periods nobody planned</li>
-              <li>Indicators being reported that were dropped from the design</li>
-              <li>Copy-paste errors that duplicate a previous period's figures into a new one</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div>
-          <div class="snum">STEP 04</div>
-        </div>
-        <div class="sbody">
-          <div class="stitle">Visualise for the people who have to act</div>
-          <p>The tracking tables are a working layer; the views built on them are what programme staff actually read.</p>
-          <div class="blk">
-            <div class="bk">Process</div>
-            <ul>
-              <li>Progress against target by indicator and period, with the gap stated rather than implied</li>
-              <li>A discrepancy view listing unresolved reconciliation items, so they are visible instead of remembered</li>
-              <li>Views built for the audience: field teams need the indicator level, management needs the outcome level</li>
-            </ul>
-          </div>
-          <div class="blk">
-            <div class="bk">Result</div>
-            <ul>
-              <li>Discrepancies surface here first, weeks before a donor report would have exposed them</li>
-            </ul>
-          </div>
+        <div class="pbody">
+          <div class="ptag">Zonal &middot; Kalimantan Barat</div>
+          <h3>ITT / MTT compilation — Zonal Kalbar</h3>
+          <p>Compiled ITT and MTT across the zone into one monitoring and visualisation layer, so output-level progress is comparable between Area Programmes.</p>
         </div>
       </div>
     </div>
 
-    <div class="callout">
-      <div class="ck">Why this is the highest-yield check in MEAL</div>
-      <ul>
-        <li><strong>It is where the money and the evidence meet.</strong> Donor reports are built from these tables; an error here becomes an error in a signed document.</li>
-        <li><strong>It catches problems no dashboard would.</strong> A dashboard faithfully displays a missing period as a low number, not as a missing period.</li>
-        <li><strong>It creates the decision log.</strong> Every correction carries a reason, which is what turns a corrected figure into a defensible one.</li>
-      </ul>
-    </div>
-
-    <div class="embed-slot" style="margin-top:44px;">
-      <div class="es-lab">Screenshot or demo</div>
-      <div class="es-note">Add a screenshot of the reconciliation view and the discrepancy log, with figures anonymised.</div>
-    </div>
   </div>
 </section>
 
@@ -178,12 +151,13 @@
     <div class="clinks">
       <a href="mailto:ersalakukua@gmail.com">ersalakukua@gmail.com</a>
       <a href="https://linkedin.com/in/ersa-lakukua" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/6285236074563?text=Hi%20Ersa%2C%20I%20found%20your%20portfolio%20and%20wanted%20to%20say%20hello!" target="_blank" rel="noopener">WhatsApp</a>
       <a href="index.html#systems">All MEAL systems</a>
       <a href="index.html">Back to portfolio</a>
     </div>
     <div class="fine">
-      <span>Ersa William Lakukua &middot; MEAL &amp; Data Quality Practitioner &middot; Jakarta, Indonesia</span>
-      <span>Process described generically; no programme data included</span>
+      <span>Ersa William Lakukua &middot; MEAL Data Specialist &middot; Jakarta, Indonesia</span>
+      <span>Screenshots anonymised; no beneficiary data shown</span>
     </div>
   </div>
 </footer>
