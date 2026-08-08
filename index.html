@@ -34,7 +34,12 @@
       <div>
         <div class="eyebrow">PEARL Lead · Strategy, Risk, Innovation &amp; Evidence · MEAL Data Specialist</div>
         <h1>Ersa William Lakukua</h1>
-        <p class="lede">MEAL practitioner with <strong>7+ years</strong> across development, grant and emergency response programmes. I design the monitoring systems — from root cause analysis through to dashboard — and run the quality assurance that keeps every figure traceable.</p>
+        <div class="hero-intro">
+          <div class="portrait">
+            <img src="portrait.jpg" alt="Ersa William Lakukua">
+          </div>
+          <p class="lede" style="margin-bottom:0;">MEAL practitioner with <strong>7+ years</strong> across development, grant and emergency response programmes. I design the monitoring systems — from root cause analysis through to dashboard — and run the quality assurance that keeps every figure traceable.</p>
+        </div>
       </div>
       <div class="hero-side">
         <span class="stag">Toolkit</span>
@@ -537,31 +542,88 @@
       <p>This is not a project, it's the principle behind every system above. Data quality is not a step at the end — it is what happens at each handover between systems. Below is what a single figure goes through on its way to a report.</p>
     </div>
 
-    <div class="gates">
-      <div class="gate">
-        <div class="gstage">Checkpoint 01</div>
-        <div class="gcheck">Is it defined?</div>
-        <div class="gdesc">Indicator reference sheets fix the definition, disaggregation and counting rule before collection starts. A figure with no agreed definition cannot be verified later.</div>
-      </div>
-      <div class="gate">
-        <div class="gstage">Checkpoint 02</div>
-        <div class="gcheck">Is it valid at entry?</div>
-        <div class="gdesc">Form logic and constraints in KoboToolbox catch out-of-range and inconsistent entries at the point of collection, while the enumerator is still with the respondent.</div>
-      </div>
-      <div class="gate">
-        <div class="gstage">Checkpoint 03</div>
-        <div class="gcheck">Did it arrive intact?</div>
-        <div class="gdesc">Automated transfer to the warehouse removes re-keying, so the figure that reaches storage is the figure that was recorded. Extraction follows one defined contract per source.</div>
-      </div>
-      <div class="gate">
-        <div class="gstage">Checkpoint 04</div>
-        <div class="gcheck">Is it consistent?</div>
-        <div class="gdesc">Deduplication, unit and category harmonisation, and reconciliation between the Indicator Tracking Table and the Monitoring Tracking Table — run in both directions, not just one.</div>
-      </div>
-      <div class="gate">
-        <div class="gstage">Checkpoint 05</div>
-        <div class="gcheck">Can it be traced?</div>
-        <div class="gdesc">Every corrected figure carries a logged reason. Error-suppressing formulas are removed so failures stay visible rather than being absorbed into a clean-looking total.</div>
+    <div class="cycle-wrap">
+      <svg class="cycle-svg" viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five data quality checkpoints arranged as a cycle">
+        <circle class="ring" cx="220" cy="220" r="140"/>
+        <!-- cycle arrows between nodes -->
+        <path class="arc" d="M 300 108 A 140 140 0 0 1 355 250"/>
+        <path class="arc" d="M 330 320 A 140 140 0 0 1 200 359"/>
+        <path class="arc" d="M 120 330 A 140 140 0 0 1 82 190"/>
+        <path class="arc" d="M 110 118 A 140 140 0 0 1 210 81"/>
+        <path class="arc" d="M 245 84 A 140 140 0 0 1 288 100" marker-end="url(#ar)"/>
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#0E8A75"/>
+          </marker>
+        </defs>
+
+        <!-- centre -->
+        <text class="core-t" x="220" y="212">Traceable</text>
+        <text class="core-t" x="220" y="232">figure</text>
+        <text class="core-s" x="220" y="254">CONTINUOUS CYCLE</text>
+
+        <!-- 01 top -->
+        <circle class="node" cx="220" cy="80" r="27"/>
+        <text class="node-n" x="220" y="85">01</text>
+        <text class="node-t" x="220" y="40">Define</text>
+
+        <!-- 02 right -->
+        <circle class="node" cx="353" cy="177" r="27"/>
+        <text class="node-n" x="353" y="182">02</text>
+        <text class="node-t" x="353" y="137">Validate</text>
+
+        <!-- 03 lower right -->
+        <circle class="node" cx="302" cy="333" r="27"/>
+        <text class="node-n" x="302" y="338">03</text>
+        <text class="node-t" x="302" y="382">Transfer</text>
+
+        <!-- 04 lower left -->
+        <circle class="node" cx="138" cy="333" r="27"/>
+        <text class="node-n" x="138" y="338">04</text>
+        <text class="node-t" x="138" y="382">Reconcile</text>
+
+        <!-- 05 left -->
+        <circle class="node" cx="87" cy="177" r="27"/>
+        <text class="node-n" x="87" y="182">05</text>
+        <text class="node-t" x="87" y="137">Trace</text>
+      </svg>
+
+      <div class="cycle-list">
+        <div class="cycle-item">
+          <span class="cn">01</span>
+          <div>
+            <div class="cq">Is it defined?</div>
+            <div class="ca">Indicator reference sheets fix the definition, disaggregation and counting rule <em>before</em> collection starts.</div>
+          </div>
+        </div>
+        <div class="cycle-item">
+          <span class="cn">02</span>
+          <div>
+            <div class="cq">Is it valid at entry?</div>
+            <div class="ca">Form logic and constraints catch impossible entries while the enumerator is still with the respondent.</div>
+          </div>
+        </div>
+        <div class="cycle-item">
+          <span class="cn">03</span>
+          <div>
+            <div class="cq">Did it arrive intact?</div>
+            <div class="ca">Automated transfer removes re-keying — the figure stored is the figure recorded.</div>
+          </div>
+        </div>
+        <div class="cycle-item">
+          <span class="cn">04</span>
+          <div>
+            <div class="cq">Is it consistent?</div>
+            <div class="ca">ITT and MTT reconciled in <em>both</em> directions, with deduplication and category harmonisation.</div>
+          </div>
+        </div>
+        <div class="cycle-item">
+          <span class="cn">05</span>
+          <div>
+            <div class="cq">Can it be traced?</div>
+            <div class="ca">Every correction carries a logged reason. Error-suppressing formulas removed so failures stay visible.</div>
+          </div>
+        </div>
       </div>
     </div>
 
