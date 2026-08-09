@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beneficiaries Tracking Table — Automation Framework — Ersa William Lakukua</title>
-<meta name="description" content="Google Forms to BigQuery to Looker Studio: continuous beneficiary tracking instead of periodic compilation.">
+<title>Automated Beneficiary Tracking System — Ersa William Lakukua</title>
+<meta name="description" content="An end-to-end pipeline from standardised beneficiary records to quality-assured programme dashboards.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,69 +29,76 @@
 <header class="subhero">
   <div class="wrap">
     <a class="back" href="index.html#systems">&larr; All MEAL systems</a>
-    <div class="eyebrow">Google Forms &rarr; BigQuery &rarr; Looker Studio</div>
-    <h1>Beneficiary tracking that is current, not compiled.</h1>
-    <p class="sub-lede">Most beneficiary tracking is a compilation exercise &mdash; collect workbooks, merge them, and the number is already stale by the time it is read. This replaces that cycle with a pipeline.</p>
+    <div class="eyebrow">Beneficiary Tracking &middot; Automation Framework</div>
+    <h1>Automated Beneficiary Tracking System</h1>
+    <p class="sub-lede">From field-level records to real-time programme insights. An end-to-end pipeline that standardised beneficiary records, automated data processing, strengthened quality controls and enabled timely programme performance insights.</p>
+    <div class="role-note">Designed and implemented as <b>MEAL Coordinator, Jakarta</b> &middot; in collaboration with the NDKMT team</div>
   </div>
 </header>
 
 <section class="sec compact">
   <div class="wrap">
 
-    <p class="flowmap-label">The pipeline &mdash; <strong>runs continuously, no compilation step</strong></p>
+    <p class="flowmap-label">Continuous automated pipeline &mdash; <strong>no manual consolidation</strong></p>
     <div class="flowmap">
-      <div class="flow-item"><span class="fnum">01</span><span class="flabel">Define the record</span></div>
-      <div class="flow-item"><span class="fnum">02</span><span class="flabel">Intake form</span></div>
-      <div class="flow-item"><span class="fnum">03</span><span class="flabel">BigQuery</span></div>
-      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Looker Studio</span></div>
+      <div class="flow-item"><span class="fnum">01</span><span class="flabel">Data Standards &amp; Governance</span></div>
+      <div class="flow-item"><span class="fnum">02</span><span class="flabel">Controlled Digital Intake</span></div>
+      <div class="flow-item"><span class="fnum">03</span><span class="flabel">Automated Data Processing</span></div>
+      <div class="flow-item"><span class="fnum">04</span><span class="flabel">Performance &amp; Data Quality Dashboard</span></div>
     </div>
 
     <div class="kgrid">
       <div class="kcard">
         <div class="kn">01</div>
-        <h3>Define the record</h3>
+        <h3>Data Standards &amp; Governance</h3>
         <ul>
-        <li>Who counts as a beneficiary per project type: direct, indirect, participant, reached</li>
-        <li>Disaggregation the logframe and donor both require: sex, age band, disability, location</li>
-        <li>A unique identifier convention that works across projects without exposing personal data</li>
-        <li>Consent wording and data protection agreed before any collection</li>
+        <li>Defines beneficiary categories and counting rules by project.</li>
+        <li>Standardises required disaggregation, including sex, age, disability and location.</li>
+        <li>Establishes unique identifiers, consent and data-protection requirements.</li>
+        <li><strong>Output:</strong> consistent and traceable beneficiary records.</li>
         </ul>
       </div>
       <div class="kcard">
         <div class="kn">02</div>
-        <h3>Intake form</h3>
+        <h3>Controlled Digital Intake</h3>
         <ul>
-        <li>One form for many projects; a project field routes the record</li>
-        <li>Required fields, response ranges and controlled dropdowns instead of free text</li>
-        <li>Conditional logic so enumerators see only relevant questions</li>
-        <li>Location from a fixed list, so it joins cleanly downstream</li>
+        <li>Uses one controlled form structure across multiple projects.</li>
+        <li>Applies project routing, required fields, validation rules and conditional logic.</li>
+        <li>Standardises locations and response categories at the point of entry.</li>
+        <li><strong>Output:</strong> complete and analysis-ready submissions.</li>
         </ul>
       </div>
       <div class="kcard">
         <div class="kn">03</div>
-        <h3>BigQuery</h3>
+        <h3>Automated Data Processing</h3>
         <ul>
-        <li>Raw responses land untouched in staging &mdash; the original is never overwritten</li>
-        <li>Transformation handles typing, dates, category harmonisation, identifier construction</li>
-        <li>Deduplication flags rather than silently deletes, so a person decides</li>
-        <li>One clean table is the only object the dashboard reads</li>
+        <li>Stores raw submissions without overwriting source records.</li>
+        <li>Automates cleaning, category harmonisation, identifier construction and deduplication flags.</li>
+        <li>Produces one quality-assured dataset as the single source for reporting.</li>
+        <li><strong>Output:</strong> clean, consolidated and auditable data.</li>
         </ul>
       </div>
       <div class="kcard">
         <div class="kn">04</div>
-        <h3>Looker Studio</h3>
+        <h3>Performance &amp; Data Quality Dashboard</h3>
         <ul>
-        <li>Cumulative and period reach against target, by project and location</li>
-        <li>Full disaggregation views, because disaggregation was fixed at step one</li>
-        <li>A data quality panel: flagged duplicates, missing disaggregation, submission gaps by site</li>
-        <li>Tracking becomes a question you ask, not a task someone performs</li>
+        <li>Tracks cumulative and periodic reach against targets by project and location.</li>
+        <li>Provides disaggregated beneficiary views for programme and donor reporting.</li>
+        <li>Flags duplicates, missing disaggregation and reporting gaps for follow-up.</li>
+        <li><strong>Output:</strong> timely programme insights without manual compilation.</li>
         </ul>
       </div>
     </div>
 
-    <div class="sec-head" style="margin-bottom:28px;">
+    <div class="impact">
+      <div class="ik">Value created</div>
+      <p>Replaced recurring manual consolidation with a continuous, traceable and quality-controlled beneficiary tracking system.</p>
+      <p class="isub">Reduced manual consolidation, strengthened data quality and traceability, and enabled faster access to disaggregated beneficiary reach for programme monitoring and decision-making. A scalable data solution developed as MEAL Coordinator, now informing my PEARL leadership approach to data quality, evidence and programme performance.</p>
+    </div>
+
+    <div class="sec-head" style="margin:56px 0 28px;">
       <div class="eyebrow">Applied in</div>
-      <h2>Where the framework runs.</h2>
+      <h2>The system in use.</h2>
       <p>Add screenshots of the live tracking views, with names and identifiers removed.</p>
     </div>
 
@@ -102,9 +109,9 @@
           <span class="pph">Screenshot</span>
         </div>
         <div class="pbody">
-          <div class="ptag">Automation framework</div>
-          <h3>Beneficiaries Tracking Table</h3>
-          <p>The live tracking dashboard reading directly from the warehouse, with the data quality panel visible.</p>
+          <div class="ptag">Dashboard</div>
+          <h3>Performance &amp; data quality view</h3>
+          <p>The live dashboard reading directly from the processed dataset, with the data quality panel visible.</p>
         </div>
       </div>
       <div class="pcard">
@@ -113,9 +120,9 @@
           <span class="pph">Screenshot</span>
         </div>
         <div class="pbody">
-          <div class="ptag">Intake</div>
-          <h3>Form and pipeline</h3>
-          <p>The intake form and the staging-to-clean transformation that feeds the dashboard.</p>
+          <div class="ptag">Intake &amp; processing</div>
+          <h3>Controlled form and pipeline</h3>
+          <p>The multi-project intake form and the automated cleaning and deduplication step behind it.</p>
         </div>
       </div>
     </div>
